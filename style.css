@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --bg-color: #080808;
+    --second-bg-color: #131313;
+    --text-color: white;
+    --main-color: #6F4E37;
+    --hover-color: #FF6347;
+}
+
+html {
+    font-size: 60%;
+    overflow-x: hidden;
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 12%;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 5;
+    transition: background 0.3s;
+}
+
+.logo {
+    font-size: 3rem;
+    color: var(--text-color);
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+    color: var(--main-color);
+    text-shadow: 0 0 50px var(--main-color);
+}
+
+.navbar a {
+    font-size: 1.8rem;
+    color: var(--text-color);
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: var(--second-bg-color);
+    background: var(--main-color);
+    padding: 10px 10px;
+    border-radius: 90px;
+}
+
+.navbar a:hover {
+    color: var(--hover-color);
+}
+
+.scrolled {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+section {
+    min-height: 100vh;
+    padding: 10rem 12% 10rem;
+}
+
+.heading {
+    font-size: 10rem;
+    text-align: center;
+    margin: 5rem 0;
+}
+
+.Home {
+    background-image: url(coffee-bean-1536x1024.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.About, .Service, .Contact {
+    padding: 100px 15px;
+    background-color: var(--second-bg-color);
+    font-size: 2rem;
+    background-image: url(coffee-cups.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 20px auto;
+    max-width: 600px;
+}
+
+form label {
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+form input,
+form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    background-color: #6F4E37;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #5C4033;
+}
+
+.contact-details {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 2rem;
+}
+
+footer {
+    backdrop-filter: blur(50px);
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 2rem;
+}
